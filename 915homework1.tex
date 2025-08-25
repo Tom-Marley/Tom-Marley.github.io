@@ -1,0 +1,112 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+%\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\title{Homework 1}
+
+\begin{document}
+
+%\thispagestyle{fancy}
+%\pagestyle{fancy}
+%\rhead{UNL | Spring 2023}
+%\lhead{Introduction to Modern Algebra II}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Math 915: Homework \# 1}
+\end{center}
+\begin{center}
+{\it Due:  Friday, September 5, 11:30am}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You should not use any resources besides me, your classmates, or our course notes.
+
+\medskip
+\noindent
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. 
+
+
+\medskip
+\noindent
+Throughout, $R$ denotes a ring with identity.
+
+\medskip
+
+\begin{problem} Let $\mathcal C$ be a category and $A$ and $B$ objects of $\mathcal C$.   Prove that if the coproduct $A\coprod B$ exists, then it is unique up to isomorphism.
+\end{problem}
+
+\begin{problem} Let $\mathcal C$ be an additive category.  Prove that the zero object of $\mathcal C$ (denoted $0_{\mathcal C}$) is unique up to isomorphism.  Now let $F:\mathcal C\to \mathcal D$ be an additive functor between additive categories. .  Prove that $F(0_{\mathcal C})=0_{\mathcal D}$.
+\end{problem}
+
+\begin{problem} Let $0\to A\xrightarrow{f} B\xrightarrow{g} C\to 0$ is a short exact sequence of $R$-modules.  Suppose there exists an $R$-linear map $j:C\to B$ such that $gj=1_C$.   Prove there exists an $R$-linear map $i:B\to A$ such that $if=1_A$.  (Do not use the theorem on splitting we proved in class.)
+\end{problem}
+
+\begin{problem} Let $F$ be an additive covariant functor from $\mathbf R$-{\bf Mod} to $\mathbf R$-{\bf Mod} and $0\to A\to B\to C\to 0$ a split short exact sequence of $R$-modules.  Prove that $0\to F(A)\to F(B)\to F(C)\to 0$ is a split exact sequence.
+\end{problem}
+
+\begin{problem}
+Prove that the middle homomorphism in the set-up of the Five Lemma is surjective.
+\end{problem}
+
+\begin{problem}  In the statement of the Snake Lemma given in class, prove that $\operatorname{im} \hat g=\ker \delta$, where $\hat g:\ker \beta\to \ker \gamma$ is the restriction of $g$ and $\delta:\ker \gamma\to \operatorname{coker} \alpha$ is the connecting homomorphism.
+\end{problem}
+
+\begin{problem} Consider the matrix
+  \[ A = \begin{bmatrix} 1 & -1 & 0 \\ 1 & 1 & 2 \\ 0 & 2 & 4\end{bmatrix},\]
+  which we can consider as a matrix over $\mathbb{Z}$ or as a matrix over $\mathbb{F}_2$ by considering its entries modulo two.
+  Consider the morphism of short exact sequences:
+\[ \xymatrix{ 0 \ar[r] & \mathbb{Z}^3 \ar[r]^{\cdot 2} \ar[d]^A & \mathbb{Z}^3 \ar[r]  \ar[d]^A & \mathbb{F}_2^3 \ar[r]  \ar[d]^A & 0 \\0 \ar[r] & \mathbb{Z}^3 \ar[r]^{\cdot 2}  & \mathbb{Z}^3 \ar[r]   & \mathbb{F}_2^3 \ar[r]   & 0 }.\]
+Explicitly compute the connecting homomorphism that arises in the Snake Lemma: find generating sets for the source and target, and write the image of each generator of the source as a combination of generators of the target.
+\end{problem}
+
+
+ 
+
+
+
+
+
+\end{document}
