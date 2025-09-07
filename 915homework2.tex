@@ -1,0 +1,114 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+%\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\mSpec}{mSpec}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ass}{Ass}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\height}{height}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\ann}{ann}
+
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\C}{\mathbb{C}}
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+
+\title{Homework 1}
+
+\begin{document}
+
+%\thispagestyle{fancy}
+%\pagestyle{fancy}
+%\rhead{UNL | Spring 2023}
+%\lhead{Introduction to Modern Algebra II}
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Math 915: Homework \# 2}
+\end{center}
+\begin{center}
+{\it Due:  Friday, September 19, 11:30am}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You should not use any resources besides me, your classmates, or our course notes.
+
+\medskip
+\noindent
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. 
+
+
+\medskip
+\noindent
+Throughout, $R$ denotes a ring with identity.
+
+\medskip
+
+\begin{problem} Prove that for a left $R$-module $N$, the functor $\Hom_R(-,N)$ is left exact.  
+\end{problem}
+
+\begin{problem} Prove that an additive functor (on module categories) is exact if and only if the functor takes short exact sequences to short exact sequences.  (Note:  Just prove the covariant case.)
+\end{problem}
+
+\begin{problem} Prove that any direct summand of a projective module is projective.
+\end{problem}
+
+\begin{problem} Assume $R$ is commutative.  Prove that every projective $R$-module is torsion-free.  (Recall that an $R$-module $M$ is torsion-free if whenever $rm=0$, where $r\in R$ is not a zero-divisor in $R$ and $m\in M$, then $m=0$.)
+\end{problem}
+
+\begin{problem}  Prove that the direct product of an arbitrary family of injective modules is injective.
+\end{problem}
+
+\begin{problem}
+Let $C$ be a chain complex and $x\in R$ a central element.  Prove that $x\operatorname{H_i}(\operatorname{cone}(\mu_x))=0$ for all $i$, where $\mu_x:C\to C$ is multiplication by $x$.  (Hint:  Let $z$ be a cycle in $\operatorname{cone}(\mu_x)_i$.  Prove that $xz$ is a boundary.)
+\end{problem}
+
+\begin{problem}  Consider the chain complexes 
+
+\begin{align}
+C:&\qquad 0\to \mathbb Z/(2)\xrightarrow{0} \mathbb Z/(2)\to 0 \notag \\
+D:&\qquad  0\to \mathbb Z/(4)\xrightarrow{2} \mathbb Z/(4)\to 0 \notag
+\end{align}
+where the nonzero terms of $C$ and $D$ are in degrees $1$ and $0$.   Show that $\operatorname{H}_*(C)\cong \operatorname{H}_*(D)$ (i.e., the homologies are isomorphic in each degree), but there is no quasi-isomorphism between the two complexes (in either direction).
+
+\end{problem}
+
+
+ 
+
+
+
+
+
+\end{document}
