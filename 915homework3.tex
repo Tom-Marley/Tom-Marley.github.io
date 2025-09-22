@@ -1,0 +1,154 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+%\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\m}{\mathfrak{m}}
+
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\type}{\operatorname{type}}
+\newcommand{\pd}{\operatorname{pd}}
+\newcommand{\syz}{\operatorname{syz}}
+\newcommand{\gHK}{\operatorname{gHK}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\mSpec}{\operatorname{mSpec}}
+\newcommand{\Depth}{\operatorname{depth}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\DeclareMathOperator{\HH}{H}
+\newcommand{\supp}{\operatorname{supp}}
+\renewcommand{\ker}{\operatorname{ker}}
+\newcommand{\Length}{\operatorname{Length}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\Max}{\operatorname{Max}}
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\Ass}{\operatorname{Ass}}	
+\newcommand{\Char}{\operatorname{char}}
+\newcommand{\rk}{\operatorname{rk}}	
+\newcommand{\height}{\operatorname{height}}	
+\newcommand{\ceil}[1]{\lceil {#1} \rceil}
+\newcommand{\floor}[1]{\lfloor {#1} \rfloor}
+\newcommand{\ls}{\leqslant}
+\newcommand{\gs}{\geqslant}
+\newcommand{\ann}{\operatorname{ann}}
+\newcommand{\Min}{\operatorname{Min}}
+
+
+\title{Homework 3}
+
+\begin{document}
+
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Math 915: Homework \# 3}
+\end{center}
+\begin{center}
+{\it Due:  Friday, October 3, 5pm}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You should not use any resources besides me, your classmates, or our course notes.
+
+\medskip
+\noindent
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. 
+
+
+\medskip
+\noindent
+Throughout, $R$ denotes a ring with identity.
+
+\medskip
+
+\begin{problem} Let $R=k[x,y]/(xy)$, where $k$ is a field.   Compute the following:
+\begin{enumerate}[(a)]
+\item $\Ext^i_R(R/(x),R)$ for all $i$.
+\item $\Ext^i_R(R/(x),R/(x))$ for all $i$.
+\item $\Ext^i_R(R/(x),k)$ for all $i$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem} Let $R$ be commutative, $M$ and $N$ $R$-modules, and $x\in R$ such that $x$ is a non-zero-divisor on $M$ and $xN=0$.   Prove that for each $i\ge 0$, $\Ext^i_R(M/xM,N)=0$ if and only if $\Ext^{i-1}_R(M,N)=\Ext^i_R(M,N)=0$.
+\end{problem}
+
+\begin{problem} Let $i:A\to B$ and $j:A\to C$ be homomorphisms of $R$-modules and $\pi:C\to X$ and $\rho:B\to X$ the canonical maps in the pushout diagram (where $X=B\oplus C/\{i(a),-j(a))\mid a\in A\}$).  Prove that the induced map $\overline{\pi}:\coker j\to \coker \rho$  is an isomorphism.
+\end{problem}
+
+\begin{problem} A complex $M$ is called {\it contractible} if $M$ is homotopy equivalent to the zero complex; equivalently, the identity map on $M$ is null-homotopic; equivalently, the zero map on $M$ is a homotopy equivalence.  (These are all easy to check.)  
+\begin{enumerate}[(a)]
+\item Prove that a contractible complex is acyclic.
+\item Show the following complex is contractible:
+$$\cdots \xrightarrow{3} \Z/(6)\xrightarrow{2} \Z/(6)\xrightarrow{3} \Z/(6)\xrightarrow{2} \cdots$$
+\item Prove that a complex $0\to A\to B\to C\to 0$ is contractible if and only if it is split exact. 
+\item Give an example of an acyclic complex which is not contractible.
+\end{enumerate}
+\end{problem}
+
+\begin{problem} Let $M$ be a non-zero $R$-module.
+\begin{enumerate}[(a)]
+\item Suppose for some $n\ge 1$, $\Ext^n_R(M,N)=0$ for all $R$-modules $N$.  Prove that $\pd_R M\le n-1$.
+\item Conclude that 
+$$\pd_R M=\sup \{i\mid \Ext^i_R(M,N)\neq 0 \text{ for some }N\}.$$
+\end{enumerate}
+\end{problem}
+
+\begin{problem} Let $F$ be a field and $V$ and $W$ two-dimensional $F$-vector spaces with bases $\{v_1,v_2\}$ and $\{w_1,w_2\}$, respectively.  Give an example (with proof) of an element of $V\otimes_F W$ which is not a simple tensor. 
+\end{problem}
+
+\begin{problem} Let $R$ be a commutative ring, $I$ an ideal of $R$, and $M$ and $R$-module.  
+\begin{enumerate}[(a)]
+\item Prove that $R/I\otimes_R M\cong M/IM$ (as $R$-modules).
+\item Give an example of an $R$, $I$ and $M$ with $I\neq R$ and $M\neq 0$ such that $R/I\otimes_R M=0$.
+\end{enumerate}
+\end{problem}
+
+
+ 
+
+
+
+
+
+\end{document}
