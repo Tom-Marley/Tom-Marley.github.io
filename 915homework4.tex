@@ -1,0 +1,141 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+%\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\m}{\mathfrak{m}}
+
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\type}{\operatorname{type}}
+\newcommand{\pd}{\operatorname{pd}}
+\newcommand{\V}{\operatorname{V}}
+\newcommand{\syz}{\operatorname{syz}}
+\newcommand{\gHK}{\operatorname{gHK}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\mSpec}{\operatorname{mSpec}}
+\newcommand{\Depth}{\operatorname{depth}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\DeclareMathOperator{\HH}{H}
+\newcommand{\Supp}{\operatorname{Supp}}
+\renewcommand{\ker}{\operatorname{ker}}
+\newcommand{\Length}{\operatorname{Length}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\Max}{\operatorname{Max}}
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\Ass}{\operatorname{Ass}}	
+\newcommand{\Char}{\operatorname{char}}
+\newcommand{\rk}{\operatorname{rk}}	
+\newcommand{\height}{\operatorname{height}}	
+\newcommand{\ceil}[1]{\lceil {#1} \rceil}
+\newcommand{\floor}[1]{\lfloor {#1} \rfloor}
+\newcommand{\ls}{\leqslant}
+\newcommand{\gs}{\geqslant}
+\newcommand{\ann}{\operatorname{ann}}
+\newcommand{\Min}{\operatorname{Min}}
+
+
+\title{Homework 4}
+
+\begin{document}
+
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Math 915: Homework \# 4}
+\end{center}
+\begin{center}
+{\it Due:  Friday, October 17, 5pm}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You should not use any resources besides me, your classmates, or our course notes.
+
+\medskip
+\noindent
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. 
+
+
+\medskip
+\noindent
+Throughout, $R$ denotes a ring with identity.
+
+\medskip
+
+
+\begin{problem} Let $R$ be a PID and $M$ and $N$ $R$-modules and assume $M$ is finitely generated.  Prove that $\Tor_i^R(M,N)=0$ for all $i\ge 2$.
+\end{problem}
+
+\begin{problem} Let $(R,m)$ be a quasi-local commutative ring. Recall that an $R$-module $M$ is called {\it finitely presented} if there exists an exact sequence $F\to G\to M\to 0$ where $F$ and $G$ are finitely generated free $R$-modules.   Prove that any finitely presented flat $R$-module is free.
+\end{problem}
+
+\begin{problem} Let $\phi:R\to S$ be a homomorphism of commutative rings and $M$ and $N$ $R$-modules.
+Prove that 
+$$(M\otimes_R S)\otimes_{S} (N\otimes_R S)\cong (M\otimes_R N)\otimes_R S.$$
+\end{problem}
+
+\begin{problem} Let $(R,m)$ be a quasi-local commutative ring and $M$ and $N$ $R$-modules. 
+\begin{enumerate}[(a)]
+\item Suppose $M$ and $N$ are finitely generated.  Prove that if $M\otimes_R N=0$ then $M=0$ or $N=0$. (Hint:  Use the previous problem with $S=R/m$ together with Nakayama's lemma and what you know about vector spaces.)
+\item Give an example to show that the assumption in (b) that $M$ and $N$ are finitely generated is necessary.
+\end{enumerate}
+\end{problem}
+
+\begin{problem} Let $R$ be a commutative ring and $M$ and $R$-module.  Define the {\it support} of $M$ by
+$$\Supp_R M=\{p\in \Spec R\mid M_p\neq 0\}.$$  Further, for an ideal $I$ of $R$, let $\V(I)=\{p\in \Spec R\mid p\supseteq I\}$.
+\begin{enumerate}[(a)]
+\item Prove that $\Supp_R M\subseteq \V(\ann_R M)$.
+\item Prove that if $M$ is finitely generated, $\Supp_R M=\V(\ann_R M))$.
+\item Prove that if $M$ and $N$ are finitely generated then $\Supp_R (M\otimes_R N)=\V(\ann_R M+\ann_R N)$. (Hint: Use Problem 5 with $S=R_p$ together with Problem 6(a).)
+\end{enumerate}
+
+\end{problem}
+
+
+
+
+
+
+
+\end{document}
