@@ -1,0 +1,162 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+%\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\m}{\mathfrak{m}}
+
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\type}{\operatorname{type}}
+\newcommand{\pd}{\operatorname{pd}}
+\newcommand{\V}{\operatorname{V}}
+\newcommand{\syz}{\operatorname{syz}}
+\newcommand{\gHK}{\operatorname{gHK}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\mSpec}{\operatorname{mSpec}}
+\newcommand{\Depth}{\operatorname{depth}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\DeclareMathOperator{\HH}{H}
+\newcommand{\Supp}{\operatorname{Supp}}
+\renewcommand{\ker}{\operatorname{ker}}
+\newcommand{\Length}{\operatorname{Length}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\Max}{\operatorname{Max}}
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\Ass}{\operatorname{Ass}}	
+\newcommand{\Char}{\operatorname{char}}
+\newcommand{\rk}{\operatorname{rk}}	
+\newcommand{\height}{\operatorname{height}}	
+\newcommand{\ceil}[1]{\lceil {#1} \rceil}
+\newcommand{\floor}[1]{\lfloor {#1} \rfloor}
+\newcommand{\ls}{\leqslant}
+\newcommand{\gs}{\geqslant}
+\newcommand{\ann}{\operatorname{ann}}
+\newcommand{\Min}{\operatorname{Min}}
+
+
+\title{Midterm}
+
+\begin{document}
+
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Math 915: Midterm}
+\end{center}
+\begin{center}
+{\it Due:  Friday, October 31, 5pm}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}  Consider this as another homework assignment, except that you are to work alone.  Everything you need to solve the problems below can be found in our class notes or in previous homework problems.  You may also consult Elo\'isa Grifo's 915 course notes from 2023.  However, please don't go combing the internet for solutions, consult AI chatbots, or the like.  If you are stuck on a problem (or several), I am more than happy to provide hints in person or through email.  
+
+\medskip
+\noindent
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. 
+
+
+\medskip
+\noindent
+Throughout, $R$ denotes a commutative ring with identity.
+
+\medskip
+
+\begin{problem}  Consider the $\Z$-module $M:=\Q/\Z_{(2)}$.  For $n\ge 0$ let $A_n:=\Z \overline{\frac{1}{2^n}}$, where $\overline{u}=u+\Z$ for any $u\in \Q$.
+\begin{enumerate}[(a)]
+\item Prove that $A_n\subsetneq A_{n+1}$ for all $n\ge 0$.
+\item Prove that every proper $\Z$-submodule of $M$ is equal to $A_n$ for some $n$.
+\item Conclude that $M$ is Artinian as a $\Z$-module but not Noetherian.
+\end{enumerate}
+\end{problem}
+
+\medskip
+
+
+
+\begin{problem} Let $(R,m,k)$ be a local ring and $M$ a finitely generated $R$-module.  
+\begin{enumerate}[(a)]
+\item Prove that $\pd_R M=\sup\{i\mid \Ext^i_R(M,k)\neq 0\}$.
+\item Prove that if $\operatorname{id}_R k<\infty$ then $\pd_R M<\infty$ for all f.g $R$-modules $M$.
+\end{enumerate}
+\end{problem}
+
+\medskip
+
+\begin{problem} Let $S=\Q[x,y,z]$ and $T=\Z_{(2)}[x]$.
+\begin{enumerate}[(a)]
+\item Prove that $\{x, y-xy, z-xz\}$ is an $S$-sequence but $\{y-xy, z-xz, x\}$ is not an $S$-sequence.
+\item Prove that $\{2,x\}$ and $\{2x-1\}$ are both maximal $T$-sequences.  (Hint: You may use without proof that for any $a\in R$ one has $R[x]/(ax-1)\cong R_W$, where $W=\{a^n\mid n\ge 0\}$.)
+\end{enumerate}
+\end{problem}
+
+\medskip
+
+\begin{problem} Let $M$ and $N$ be $R$-modules and $x\in R$ such that $x$ is both $R$-regular and $M$-regular (i.e., $\{x\}$ is both an $R$-sequence and an $M$-sequence).  Assume also that $xN=0$.
+\begin{enumerate}[(a)]
+\item Prove that $\Tor_i^R(M,R/(x))=0$ for $i\ge 1$.
+\item Let $F$ be a free resolution of $M$.  Prove that $F/xF\cong F\otimes_R R/(x)$ is a free $R/(x)$-resolution of $M/xM$.  (Hint: Use part (a).)
+\item  Prove that $F\otimes_R N\cong F/xF\otimes_{R/(x)} N$.  (Hint: $N\cong N/xN\cong R/(x)\otimes_{R/(x)} N$.)
+\item  Prove that $\Tor_i^R(M,N)\cong \Tor_i^{R/(x)}(M/xM,N)$ for all $i$.
+\end{enumerate}
+\end{problem}
+
+\medskip
+
+\begin{problem} Let $(R,m,k)$ be a local ring and $M$ a finitely generated $R$-module.  Let $\underline{x}=x_1,\dots,x_n\in m$ be both an $R$-sequence and an $M$-sequence.  Recall that $\beta_i^R(M)=\dim_k \Tor_i^R(M,k)$.
+\begin{enumerate}[(a)]
+\item Prove that $\beta_i^R(M)=\beta_i^{R/(\underline{x})}(M/(\underline{x})M)$ for all $i\ge 0$.
+\item Prove that $\pd_R M=\pd_{R/(\underline{x})} M/(\underline{x})M$.
+\end{enumerate}
+\end{problem}
+
+
+
+
+
+
+
+
+
+
+\end{document}
