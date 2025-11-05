@@ -1,0 +1,140 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+%\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\m}{\mathfrak{m}}
+
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\type}{\operatorname{type}}
+\newcommand{\pd}{\operatorname{pd}}
+\newcommand{\V}{\operatorname{V}}
+\newcommand{\syz}{\operatorname{syz}}
+\newcommand{\gHK}{\operatorname{gHK}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\mSpec}{\operatorname{mSpec}}
+\newcommand{\Depth}{\operatorname{depth}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\hh}{\operatorname{H}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\grade}{\operatorname{grade}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\DeclareMathOperator{\HH}{H}
+\newcommand{\Supp}{\operatorname{Supp}}
+\renewcommand{\ker}{\operatorname{ker}}
+\newcommand{\Length}{\operatorname{Length}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\Max}{\operatorname{Max}}
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\Ass}{\operatorname{Ass}}	
+\newcommand{\depth}{\operatorname{depth}}	
+\newcommand{\cone}{\operatorname{cone}}
+\newcommand{\Char}{\operatorname{char}}
+\newcommand{\rk}{\operatorname{rk}}	
+\newcommand{\height}{\operatorname{height}}	
+\newcommand{\ceil}[1]{\lceil {#1} \rceil}
+\newcommand{\floor}[1]{\lfloor {#1} \rfloor}
+\newcommand{\ls}{\leqslant}
+\newcommand{\gs}{\geqslant}
+\newcommand{\ann}{\operatorname{ann}}
+\newcommand{\Min}{\operatorname{Min}}
+
+
+\title{Homework 5}
+
+\begin{document}
+
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Math 915: Homework \# 5}
+\end{center}
+\begin{center}
+{\it Due:  Friday, November 14th, 5pm}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You should not use any resources besides me, your classmates, or our course notes.
+
+\medskip
+\noindent
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. 
+
+
+\medskip
+\noindent
+Throughout, $R$ denotes a commutative ring with identity.
+
+\medskip
+
+
+\begin{problem} Let $(R,m)$ be a local ring and $0\to A\to B\to C\to 0$ a short exact sequence of finitely generated $R$-modules.  Suppose $\depth B>\depth C$.  Prove that $\depth A=\depth C+1$.  
+\end{problem}
+
+\medskip
+
+\begin{problem} Let $R$ be a Noetherian ring and $m$ a maximal ideal of $R$.  Let $M$ be an $R$-module (not necessarily finitely generated) such that for every $u\in M$ there exists an integer $n$ such that $m^nu=0$.  Prove that $M\cong M_m$.  Hence, conclude that every $R$-submodule of $M$ is an $R_m$-submodule of $M$.  (In particular, this applies to $\Z$-module $\Q/\Z_{(2)}$ from the midterm.)
+\end{problem}
+
+\medskip
+
+\begin{problem} Let $f:C\to D$ be a morphism of chain complexes, and let $M$ be an $R$-module.   Prove that $\cone(f\otimes 1_M)\cong \cone(f)\otimes_R M$ (i.e., isomorphic as chain complexes).  Conclude that if $\underline{x}=x_1,\dots,x_n\in R$ and $K(\underline{x};M)$ is the Koszul complex of $\underline{x}$ on $M$ (as defined in class using mapping cones), then $K(\underline{x};M)\cong K(\underline{x};R)\otimes_R M$.  
+\end{problem}
+
+\medskip
+
+\begin{problem} Let $\underline{x}=x_1,\dots,x_n\in R$ and $M$ an $R$-module. Let $\hh_i(\underline{x};M)$ denote the $i$th Koszul homology of $\underline{x}$ on $M$.   Prove that if $\underline{x}$ is an $R$-sequence, then $\hh_i(\underline{x};M)\cong \Tor_i^R(R/(\underline{x}),M)$.
+\end{problem}
+
+\medskip
+
+\begin{problem} Let $R$ be a Noetherian ring, $M$ a finitely generated $R$-module, and $I$ an ideal such that $IM\neq M$.  Prove that $\grade_I M=\inf \{\grade_{I_p}M_p\mid p\supseteq I, p\in \Spec R\}.$
+\end{problem}
+
+
+
+
+
+
+
+\end{document}
