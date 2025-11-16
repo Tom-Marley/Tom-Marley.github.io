@@ -1,0 +1,153 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,enumerate}
+\usepackage[]{graphicx}
+\usepackage{color,subfigure}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[all]{xypic}
+\usepackage[colorlinks=true,citecolor=cyan,linkcolor=magenta]{hyperref}
+\usepackage{colonequals}
+
+\usepackage{fancyhdr, lastpage}
+%\pagestyle{fancy}
+\fancyfoot[C]{{\thepage} of \pageref{LastPage}}
+
+
+
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\m}{\mathfrak{m}}
+
+
+
+\title{}
+\date{\vspace{-0.5in}}
+
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\type}{\operatorname{type}}
+\newcommand{\pd}{\operatorname{pd}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\V}{\operatorname{V}}
+\newcommand{\syz}{\operatorname{syz}}
+\newcommand{\gHK}{\operatorname{gHK}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\mSpec}{\operatorname{mSpec}}
+\newcommand{\Depth}{\operatorname{depth}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\hh}{\operatorname{H}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\grade}{\operatorname{grade}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\DeclareMathOperator{\HH}{H}
+\newcommand{\Supp}{\operatorname{Supp}}
+\renewcommand{\ker}{\operatorname{ker}}
+\newcommand{\Length}{\operatorname{Length}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\Max}{\operatorname{Max}}
+\newcommand{\Ann}{\operatorname{Ann}}
+\newcommand{\Ass}{\operatorname{Ass}}	
+\newcommand{\depth}{\operatorname{depth}}	
+\newcommand{\cone}{\operatorname{cone}}
+\newcommand{\Char}{\operatorname{char}}
+\newcommand{\rk}{\operatorname{rk}}	
+\newcommand{\height}{\operatorname{height}}	
+\newcommand{\ceil}[1]{\lceil {#1} \rceil}
+\newcommand{\floor}[1]{\lfloor {#1} \rfloor}
+\newcommand{\ls}{\leqslant}
+\newcommand{\gs}{\geqslant}
+\newcommand{\ann}{\operatorname{ann}}
+\newcommand{\Min}{\operatorname{Min}}
+
+
+\title{Homework 6}
+
+\begin{document}
+
+
+\vspace{3em}
+
+\begin{center}
+	{\LARGE Math 915: Homework \# 6}
+\end{center}
+\begin{center}
+{\it Due:  Friday, December 5th}
+\end{center}
+
+\
+
+\noindent
+{\bf Instructions:}
+You are encouraged to work together on these problems, but each student should hand in their own draft, written in a way that indicates their individual understanding of the solutions. Never submit something for grading that you do not completely understand. You should not use any resources besides me, your classmates, or our course notes.
+
+\medskip
+\noindent
+I will post the .tex code for these problems for you to use if you wish to type your homework. If you prefer not to type, please  {\em write neatly}. As a matter of good proof writing style, please use complete sentences and correct grammar. 
+
+
+\medskip
+\noindent
+Throughout, $R$ denotes a commutative ring with identity.
+
+\medskip
+
+
+\begin{problem} Prove that an $R$-module $E$ is injective if and only if $\Ext^1_R(R/I,E)=0$ for all ideals $I$ of $R$.
+\end{problem}
+
+\begin{problem} Suppose for some integer $n$ that $\pd_R R/I\le n$ for all ideals $I$ of $R$.  Prove that $\id_R M\le n$ for all $R$-modules $M$.  
+\end{problem}
+
+\begin{problem} Let $R$ be a Noetherian ring and $M$ an $R$-module.  Prove that $M$ is an injective $R$-module if and only if $M_p$ is an injective $R_p$-module for all prime ideals $p$ of $R$.
+\end{problem}
+
+
+\begin{problem} Consider the contravariant functor $(-)^*:=\Hom_{\Z}(-,\Q/\Z)$.  As $\Q/\Z$ is an injective $\Z$-module, $(-)^*$ is an exact functor from $R$-mod to $R$-mod.  (Note that every $R$-module is a $\Z-R$ bimodule, so $M^*$ is an $R$-module for every $R$-module $M$.)
+\begin{enumerate}[(a)]
+\item Prove that the evaluation homomorphism $\phi:M\to M^{**}$ is an injective $R$-module homomorphism for every $R$-module $M$.  (The evaluation homomorphism is defined as follows:  For $u\in M$, define $\phi(u)(f):=f(u)$ for every $f\in M^*$.)
+\item Let $f:A\to B$ and $g:B\to C$ be $R$-module homomorphisms.  Prove that $A\to B\to C$ is exact if and only if $C^*\to B^*\to A^*$ is exact.
+\item Prove that $M$ is a flat $R$-module if and only if $M^*$ is an injective $R$-module.
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem} Let $(R,m)$ be a local PID which is not a field. Prove that $E_R(R/m)\cong Q/R$, where
+$Q$ is the field of fractions of $R$.  
+\end{problem}
+
+\begin{problem} Let $I$ be ideal of $R$, and $M$ an $R$-module.
+Prove that $\Hom_R(R/I,E_R(M))\cong E_{R/I}(\Hom_R(R/I,M))$.
+\end{problem}
+
+\begin{problem} Let $(R,m)$ be a quasi-local ring.
+\begin{enumerate}[(a)]
+\item Prove that $R$ is indecomposable (as an $R$-module).
+\item Suppose $R$ is Noetherian and an injective $R$-module.  Prove that $R\cong E_R(R/m)$.)
+\end{enumerate}
+\end{problem}
+
+\end{document}
+
+
+
+
+
+
+
+\end{document}
